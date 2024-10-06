@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <title>Password Create App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="pt-5">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="text-center">비밀번호 생성하기!</h1>
+            <div
+              class="alert alert-success d-flex justify-content-between"
+              role="alert"
+            >
+              <div class="row">
+                클릭해서 비밀번호를 복사합니다.
+                <span id="password"></span>
+              </div>
+              <div>
+                <button type="button" class="btn btn-light" id="copy">
+                  복사
+                </button>
+              </div>
+            </div>
+            <hr />
+            <form class="form-floating">
+              <div>
+                <div class="mb-3">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="length"
+                      min="5"
+                      max="70"
+                      required
+                    />
+                    <label for="length">Length</label>
+                  </div>
+                </div>
+                <div id="checkList">
+                  <h5>포함할 문자:</h5>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="numbers"
+                      checked
+                      disabled
+                    />
+                    <label class="form-check-label" for="numbers">
+                      Numbers (0-9)
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="smallAlpabet"
+                    />
+                    <label class="form-check-label" for="smallAlpabet">
+                      Small Letters (a-z)
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="largeAlpabet"
+                    />
+                    <label class="form-check-label" for="largeAlpabet">
+                      Capital Letters (A-Z)
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="symbols"
+                    />
+                    <label class="form-check-label" for="symbols">
+                      Symbols (@, !, #, $, %, &)
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-3">
+                <button class="btn btn-dark w-100" type="submit" id="create">
+                  생성하기
+                </button>
+              </div>
+            </form>
+            <div class="mt-3">
+              <div class="alert alert-info" role="alert">
+                <h5>안내 사항</h5>
+                <ul class="m-0">
+                  <li>최소 길이는 5입니다.</li>
+                  <li>최대 길이는 70입니다.</li>
+                  <li>강력한 비밀번호는 10~16자리여야 합니다.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
